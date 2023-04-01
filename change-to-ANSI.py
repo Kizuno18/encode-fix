@@ -15,7 +15,7 @@ def converte_arquivos(path):
                     if encoding is None:
                         encoding = 'utf-8'
                 conteudo_str = conteudo.decode(encoding)
-                conteudo_codificado = conteudo_str.encode('ANSI')
+                conteudo_codificado = conteudo_str.encode('ANSI', errors='ignore')
                 with open(item_path, 'wb') as f:
                     f.write(conteudo_codificado)
 
