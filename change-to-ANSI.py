@@ -8,7 +8,7 @@ def converte_arquivos(path):
         if os.path.isdir(item_path):
             converte_arquivos(item_path)
         else:
-            if item.endswith('.lua') or item.endswith('.xml'):
+            if item.endswith('.lua'):
                 with open(item_path, 'rb') as f:
                     conteudo = f.read()
                     encoding = chardet.detect(conteudo)['encoding']
